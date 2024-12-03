@@ -20,7 +20,7 @@ RSpec.describe CalculaDescontoService, type: :service do
 
     context 'number is invalid' do
       it 'generates error' do
-        expect{
+        expect {
           described_class.calcula_desconto("invalid")
         }.to raise_error(StandardError)
       end

@@ -37,11 +37,11 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 # Asked gems
-gem 'redis'
-gem 'sidekiq'
-gem 'rubocop-rails', require: false
-gem 'kaminari'
-gem "chartkick" #Rails gem using Chart.js
+gem "redis"
+gem "sidekiq"
+gem "rubocop-rails", require: false
+gem "kaminari"
+gem "chartkick" # Rails gem using Chart.js
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -52,9 +52,9 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
-  gem 'factory_bot_rails'
-  gem 'rspec-rails', '~> 7.0.0'
-  gem 'faker'
+  gem "factory_bot_rails"
+  gem "rspec-rails", "~> 7.0.0"
+  gem "faker"
 end
 
 group :development do

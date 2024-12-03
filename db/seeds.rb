@@ -17,7 +17,7 @@ Proponente.create(
   salario: "3000",
   address: Address.create(
     logradouro: "Rua 1",
-    numero: "2" ,
+    numero: "2",
     bairro: "Centro",
     cidade: "Canoas",
     estado: "Rio Grande do Sul",
@@ -33,7 +33,7 @@ Proponente.create(
   salario: "4000",
   address: Address.create(
     logradouro: "Rua 1",
-    numero: "2" ,
+    numero: "2",
     bairro: "Centro",
     cidade: "Canoas",
     estado: "Rio Grande do Sul",
@@ -49,7 +49,7 @@ Proponente.create(
   salario: "2000",
   address: Address.create(
     logradouro: "Rua 1",
-    numero: "2" ,
+    numero: "2",
     bairro: "Centro",
     cidade: "Canoas",
     estado: "Rio Grande do Sul",
@@ -65,7 +65,7 @@ Proponente.create(
   salario: "2500",
   address: Address.create(
     logradouro: "Rua 1",
-    numero: "2" ,
+    numero: "2",
     bairro: "Centro",
     cidade: "Canoas",
     estado: "Rio Grande do Sul",
@@ -81,7 +81,7 @@ Proponente.create(
   salario: "3200",
   address: Address.create(
     logradouro: "Rua 1",
-    numero: "2" ,
+    numero: "2",
     bairro: "Centro",
     cidade: "Canoas",
     estado: "Rio Grande do Sul",
@@ -97,7 +97,7 @@ Proponente.create(
   salario: "5100",
   address: Address.create(
     logradouro: "Rua 1",
-    numero: "2" ,
+    numero: "2",
     bairro: "Centro",
     cidade: "Canoas",
     estado: "Rio Grande do Sul",
@@ -113,7 +113,7 @@ Proponente.create(
   salario: "1000",
   address: Address.create(
     logradouro: "Rua 1",
-    numero: "2" ,
+    numero: "2",
     bairro: "Centro",
     cidade: "Canoas",
     estado: "Rio Grande do Sul",
@@ -129,7 +129,7 @@ Proponente.create(
   salario: "800",
   address: Address.create(
     logradouro: "Rua 1",
-    numero: "2" ,
+    numero: "2",
     bairro: "Centro",
     cidade: "Canoas",
     estado: "Rio Grande do Sul",
@@ -145,7 +145,7 @@ Proponente.create(
   salario: "300",
   address: Address.create(
     logradouro: "Rua 1",
-    numero: "2" ,
+    numero: "2",
     bairro: "Centro",
     cidade: "Canoas",
     estado: "Rio Grande do Sul",

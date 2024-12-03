@@ -44,7 +44,7 @@ class ProponenteController < ApplicationController
     if @proponente.destroy!
       flash[:notice] = "Proponente removido"
       redirect_to index_proponente_path
-    end 
+    end
   rescue
     flash[:alert] = "Proponente não removido"
   end
@@ -56,7 +56,7 @@ class ProponenteController < ApplicationController
   end
 
   def proponente_params
-    params.require(:proponente).permit(:nome, 
+    params.require(:proponente).permit(:nome,
                                        :nascimento,
                                        :telefone_pessoal,
                                        :telefone_referencia,

@@ -1,0 +1,72 @@
+<div class="container login-container">
+  <h2>Editar <%= @proponente.nome %></h2>
+  <div class="tab-pane" aria-labelledby="tab-register">
+      <%= form_for @proponente do |f| %>
+
+        <div data-mdb-input-init class="form-outline mb-4">
+          <%= f.label :nome, class: "form-label"%><br />
+          <%= f.text_field :nome, autofocus: true, class: "form-control", required: true%>
+        </div>
+        <div data-mdb-input-init class="form-outline mb-4">
+          <%= f.label :cpf, class: "form-label"%><br />
+          <%= f.text_field :cpf, autofocus: true, class: "form-control", required: true%>
+        </div>
+        <div data-mdb-input-init class="form-outline mb-4">
+          <%= f.label :nascimento, class: "form-label"%><br />
+          <%= f.text_field :nascimento, autofocus: true, class: "form-control", required: true%>
+        </div>
+        <div data-mdb-input-init class="form-outline mb-4">
+          <%= f.label :telefone_pessoal, class: "form-label"%><br />
+          <%= f.text_field :telefone_pessoal, autofocus: true, class: "form-control"%>
+        </div>
+        <div data-mdb-input-init class="form-outline mb-4">
+          <%= f.label :telefone_referencia, class: "form-label"%><br />
+          <%= f.text_field :telefone_referencia, autofocus: true, class: "form-control"%>
+        </div>
+        <div data-mdb-input-init class="form-outline mb-4">
+          <%= f.label :salario, class: "form-label"%><br />
+          <%= f.text_field :salario, autofocus: true, class: "form-control", required: true%>
+        </div>
+        <div data-mdb-input-init class="form-outline mb-4">
+          <%= f.label :desconto, class: "form-label"%><br />
+          <%= f.text_field :desconto, autofocus: true, class: "form-control", disabled: true%>
+          <%= f.hidden_field :desconto, id: "desconto-final"%>
+        </div>
+
+        
+        <%= f.fields_for @proponente.address do |address_subform| %>
+          <div data-mdb-input-init class="form-outline mb-4">
+            <%= address_subform.label :logradouro, class: "form-label"%><br />
+            <%= address_subform.text_field :logradouro, autofocus: true, class: "form-control", required: true%>
+          </div>
+          <div data-mdb-input-init class="form-outline mb-4">
+            <%= address_subform.label :numero, class: "form-label"%><br />
+            <%= address_subform.text_field :numero, autofocus: true, class: "form-control", required: true%>
+          </div>
+          <div data-mdb-input-init class="form-outline mb-4">
+            <%= address_subform.label :bairro, class: "form-label"%><br />
+            <%= address_subform.text_field :bairro, autofocus: true, class: "form-control", required: true%>
+          </div>
+          <div data-mdb-input-init class="form-outline mb-4">
+            <%= address_subform.label :cidade, class: "form-label"%><br />
+            <%= address_subform.text_field :cidade, autofocus: true, class: "form-control", required: true%>
+          </div>
+            <div data-mdb-input-init class="form-outline mb-4">
+            <%= address_subform.label :estado, class: "form-label"%><br />
+            <%= address_subform.text_field :estado, autofocus: true, class: "form-control", required: true%>
+          </div>
+            <div data-mdb-input-init class="form-outline mb-4">
+            <%= address_subform.label :cep, class: "form-label"%><br />
+            <%= address_subform.text_field :cep, autofocus: true, class: "form-control", required: true%>
+          </div>
+          
+        <% end %>
+        <%= f.submit "Atualizar", class: "btn btn-primary btn-block mb-3"%>
+      <% end %>
+    </div>
+    <%= link_to "Voltar", proponente_index_path, class: "btn btn-link" %>
+  </div>
+
+</div>
+
+<%= render "ajax_req" %>

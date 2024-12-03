@@ -1,0 +1,36 @@
+<div class="container">
+  <%= link_to "Registrar novo Proponente", new_proponente_path, method: :get, class:"btn btn-outline-success my-2 my-sm-0"  %>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">CPF</th>
+        <th scope="col">Salario</th>
+        <th scope="col">Desconto</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @proponentes.each do |proponente| %>
+        <tr>
+          <th scope="row"><%= proponente.id %></th>
+          <td><%= proponente.nome %></td>
+          <td><%= proponente.cpf %></td>
+          <td><%= proponente.salario %></td>
+          <td><%= proponente.desconto %></td>
+          <td>
+            <div class="btn-group" role="group">
+              <%= link_to "Exibir", proponente_path(id: proponente.id), method: :get, class:"btn btn-outline-success my-2 my-sm-0"  %>
+              <%= link_to "Editar", edit_proponente_path(id: proponente.id), method: :get, class:"btn btn-outline-success my-2 my-sm-0"  %>
+              <%= link_to "Atualizar Salário", edit_salario_path(id: proponente.id), method: :get, class:"btn btn-outline-success my-2 my-sm-0"  %>
+              <%= button_to "Remover", proponente_path(id: proponente.id), method: :delete, class:"btn btn-outline-danger my-2 my-sm-0"  %>  
+            </div>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= paginate @proponentes %>
+</div>

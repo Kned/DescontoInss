@@ -1,0 +1,45 @@
+<div class="container">
+  Relatorio
+
+  <%= pie_chart(@chart, legend: "bottom") %>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Faixa</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Usuários</th>
+      </tr>
+    </thead>
+    <tbody>
+     
+      <tr>
+        <td>Faixa 1</td>
+        <td>Até R$ 1.045,00</td>
+        <td><%= @chart[:faixa_1] %></td>
+      </tr>
+
+      <tr>
+        <td>Faixa 2</td>
+        <td>De R$ 1.045,01 a R$ 2.089,60</td>
+        <td><%= @chart[:faixa_2] %></td>
+      </tr>
+
+      <tr>
+        <td>Faixa 3</td>
+        <td>De R$ 2.089,61 até R$ 3.134,40</td>
+        <td><%= @chart[:faixa_3] %></td>
+      </tr>
+
+      <tr>
+        <td>Faixa 4</td>
+        <td>De R$ 3.134,41 até R$ 6.101,06</td>
+        <td><%= @chart[:faixa_4] %></td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+
+

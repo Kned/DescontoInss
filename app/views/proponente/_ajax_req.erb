@@ -1,0 +1,15 @@
+<script>
+const selectElement = document.getElementById("proponente_salario");
+
+selectElement.addEventListener("change", (event) => {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("proponente_desconto").value = this.responseText
+    document.getElementById("desconto-final").value = this.responseText
+  }
+  let formData = new FormData(document.forms.desconto);
+  formData.append("salario", selectElement.value);
+  xhttp.open("post", "calcula_desconto");
+  xhttp.send(formData);
+});
+</script>

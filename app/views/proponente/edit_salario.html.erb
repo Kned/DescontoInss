@@ -1,0 +1,17 @@
+<div class="container login-container">
+  <h2>Editar Salario <%= @proponente.nome %></h2>
+  <div class="tab-pane" aria-labelledby="tab-register">
+      <%= form_with scope: "proponente", url: update_salario_path(id: @proponente.id), method: :put  do |f| %>
+
+        <div data-mdb-input-init class="form-outline mb-4">
+          <%= f.label :salario, class: "form-label"%><br />
+          <%= f.text_field :salario, autofocus: true, class: "form-control", required: true%>
+        </div>
+
+        <%= f.submit "Atualizar", class: "btn btn-primary btn-block mb-3"%>
+      <% end %>
+    </div>
+    <%= link_to "Voltar", proponente_index_path, class: "btn btn-link" %>
+  </div>
+
+</div>

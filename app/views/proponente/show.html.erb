@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="card">
+    <% @proponente.attributes.each do |attribute| %>
+      <% unless attribute[1].blank? || attribute[0] == 'created_at'|| attribute[0] == 'updated_at' %>
+        <ul><%=t "models.proponente.#{attribute[0]}" %>
+          <li type="#{attribute[0]}"  id="#{attribute[0]}"><%= attribute[1] %></li>
+        </ul>
+      <% end %>
+    <% end %>
+    <% @proponente.address.attributes.each do |attribute| %>
+      <% unless attribute[1].blank? ||
+         attribute[0] == 'created_at'||
+         attribute[0] == 'updated_at' ||
+         attribute[0] == 'proponente_id'%>
+        <ul><%=t "models.address.#{attribute[0]}" %>
+          <li type="#{attribute[0]}"  id="#{attribute[0]}"><%= attribute[1] %></li>
+        </ul>
+      <% end %>
+    <% end %>
+  </div>
+  <%= link_to "Voltar", proponente_index_path, class: "btn btn-link" %>
+</div>
+ 
